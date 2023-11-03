@@ -1,0 +1,326 @@
+[
+    {
+        "id": 1,
+        "name": "Example Restaurant",
+        "company_id": 1,
+        "description": "Pizza Restaurant",
+        "slug": "pizza-restaurant",
+        "address": "Kopenhag",
+        "email": "info@pizza.net",
+        "phone": "31365051",
+        "afhentning_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "levering_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:20-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "12:10-14:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "15:10-19:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "categories": [
+            {
+                "name": "Noodle Bowls",
+                "description": "Example Noodle Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Noodle Bowl",
+                        "description": "Delicious Chicken Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    },
+                    {
+                        "name": "Steak Noodle Bowl",
+                        "description": "Delicious Steak Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "25 kr."
+                    },
+                    {
+                        "name": "Season Noodle Bowl",
+                        "description": "Delicious Season Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "10 kr."
+                    }
+                ]
+            },
+            {
+                "name": "Poke Bowls",
+                "description": "Example Poke Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Poke Bowl",
+                        "description": "Delicious Chicken Poke Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    }
+                ]
+            }
+        ] 
+    },
+    {
+        "id": 2,
+        "name": "Example Restaurant 2",
+        "company_id": 1,
+        "description": "Pizza Restaurant 2",
+        "slug": "pizza-restaurant-2",
+        "address": "Berlin",
+        "email": "info@pizza.net",
+        "phone": "31365051",
+        "afhentning_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "levering_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:20-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "12:10-14:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "15:10-19:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "categories": [
+            {
+                "name": "Noodle Bowls",
+                "description": "Example Noodle Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Noodle Bowl",
+                        "description": "Delicious Chicken Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    },
+                    {
+                        "name": "Steak Noodle Bowl",
+                        "description": "Delicious Steak Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "25 kr."
+                    },
+                    {
+                        "name": "Season Noodle Bowl",
+                        "description": "Delicious Season Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "10 kr."
+                    }
+                ]
+            },
+            {
+                "name": "Poke Bowls",
+                "description": "Example Poke Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Poke Bowl",
+                        "description": "Delicious Chicken Poke Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    }
+                ]
+            }
+        ]  
+    },
+    {
+        "id": 3,
+        "name": "Example Restaurant 3",
+        "company_id": 1,
+        "description": "Pizza Restaurant 3",
+        "slug": "pizza-restaurant-3",
+        "address": "Istanbul",
+        "email": "info@pizza.net",
+        "phone": "31365051",
+        "afhentning_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "levering_hours": [
+            {
+                "day": "Mandag",
+                "hours": "08:20-12:10"
+            },
+            {
+                "day": "Tirsdag",
+                "hours": "12:10-14:10"
+            },
+            {
+                "day": "Onsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Torsdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Fredag",
+                "hours": "15:10-19:10"
+            },
+            {
+                "day": "Lørdag",
+                "hours": "08:10-12:10"
+            },
+            {
+                "day": "Søndag",
+                "hours": "08:10-12:10"
+            }
+        ],
+        "categories": [
+            {
+                "name": "Noodle Bowls",
+                "description": "Example Noodle Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Noodle Bowl",
+                        "description": "Delicious Chicken Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    },
+                    {
+                        "name": "Steak Noodle Bowl",
+                        "description": "Delicious Steak Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "25 kr."
+                    },
+                    {
+                        "name": "Season Noodle Bowl",
+                        "description": "Delicious Season Noodle Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "10 kr."
+                    }
+                ]
+            },
+            {
+                "name": "Poke Bowls",
+                "description": "Example Poke Bowls",
+                "products": [
+                    {
+                        "name": "Chicken Poke Bowl",
+                        "description": "Delicious Chicken Poke Bowls",
+                        "img": "https://caspars.mealo.dk/media/5559/3e39734e-6a01-11eb-9389-2e1c6fa3fd71_noodle_bowl.jpeg",
+                        "price": "15 kr."
+                    }
+                ]
+            }
+        ] 
+    }
+]
