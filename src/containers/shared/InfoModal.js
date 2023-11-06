@@ -1,6 +1,5 @@
-import { MyContext } from '@/context/context'
 import { IconInfoCircle, IconMotorbike, IconShoppingBag, IconX } from '@tabler/icons-react'
-import React, { useContext } from 'react'
+import React from 'react'
 
 export const InfoModal = ({ deliveryType, setDeliveryType, restaurant, day, setInfoModal, infoModal }) => {
 
