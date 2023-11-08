@@ -30,14 +30,15 @@ export const RestaurantProductModalComponent = ({
   }
 
   function addToBasket() {
-    const newBasket = basket.filter((x) => x.product.id != product.id);
     if (basket != "null" && basket) {
+      const newBasket = basket.filter((x) => x.product.id != product.id);
       setBasket(() => {
         let newArr = [
           ...newBasket,
           {
             product,
             amount,
+            note,
           },
         ];
 
@@ -48,6 +49,7 @@ export const RestaurantProductModalComponent = ({
         {
           product,
           amount,
+          note,
         },
       ]);
     }

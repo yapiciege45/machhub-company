@@ -25,6 +25,7 @@ export const RestaurantContainer = ({ slug }) => {
   const [scrollingCategory, setScrollingCategory] = useState(null);
 
   const [basket, setBasket] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const topRef = useRef(null);
 
@@ -53,6 +54,18 @@ export const RestaurantContainer = ({ slug }) => {
       });
     }
   }, [search]);
+
+  useEffect(() => {
+    let newPrice = 0;
+
+    if (basket.length > 0) {
+      basket.forEach((x) => {
+        newPrice += x.amount * x.product.price;
+      });
+    }
+
+    setTotalPrice(newPrice);
+  }, [basket]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,6 +174,7 @@ export const RestaurantContainer = ({ slug }) => {
             deliveryType={deliveryType}
             setDeliveryType={setDeliveryType}
             basket={basket}
+            totalPrice={totalPrice}
           />
         </div>
       </div>
