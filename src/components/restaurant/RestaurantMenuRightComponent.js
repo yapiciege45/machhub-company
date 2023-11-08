@@ -80,7 +80,9 @@ export const RestaurantMenuRightComponent = ({
             </div>
           ))
         )}
-        <div className="flex flex-col p-5">
+        {
+          basket && (
+<div className="flex flex-col p-5">
           <div className="flex items-center justify-between">
             <p className="text-xs">Posegebyr</p>
             <p className="text-xs">4 kr.</p>
@@ -101,6 +103,9 @@ export const RestaurantMenuRightComponent = ({
           </div>
         </div>
       </div>
+          )
+        }
+        
       {basket && (
         <div className="w-full rounded-lg p-3 mt-5 flex justify-center items-center bg-[#4c653f] cursor-pointer">
           <p className="text-sm text-white font-bold">Gå til betaling</p>
