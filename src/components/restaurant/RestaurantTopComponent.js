@@ -9,6 +9,7 @@ import React, { forwardRef } from "react";
 
 export const RestaurantTopComponent = forwardRef(
   ({ deliveryType, setDeliveryType, restaurant, day }, ref) => {
+    console.log(restaurant);
     function getCurrentHourAndMinuteInMilliseconds() {
       const now = new Date();
       const currentHour = now.getHours();

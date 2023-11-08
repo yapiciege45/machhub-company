@@ -1,8 +1,7 @@
-import Restaurants from "@/mocks/Restaurants.json"
+import Restaurants from "@/mocks/Restaurants.json";
 
-export const getRestaurant = (slug) => {
+export const getRestaurant = async (slug) => {
+  const restaurant = Restaurants.find((x) => x.slug == slug);
 
-    const restaurant = Restaurants.find(x => x.slug == slug)
-
-  return restaurant
-}
+  return restaurant;
+};

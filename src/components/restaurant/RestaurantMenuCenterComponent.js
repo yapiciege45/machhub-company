@@ -9,15 +9,10 @@ export const RestaurantMenuCenterComponent = ({
   setCategory,
   category,
   setScrollingCategory,
-  isVisible,
 }) => {
   return (
-    <div className={`p-5 flex flex-col w-full lg:w-8/12 items-start relative`}>
-      <div
-        className={`${
-          isVisible ? "" : "fixed top-0 left-0 p-3"
-        } bg-[#F5F3ED] w-full`}
-      >
+    <div className={`p-5 flex flex-col w-full lg:w-1/2 items-start relative`}>
+      <div className={`sticky p-3 top-0 left-0 bg-[#F5F3ED] w-full`}>
         <div
           className={`w-full py-3 overflow-x-scroll flex lg:hidden items-center gap-8`}
         >
