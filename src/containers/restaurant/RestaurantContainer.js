@@ -58,7 +58,7 @@ export const RestaurantContainer = ({ slug }) => {
   useEffect(() => {
     let newPrice = 0;
 
-    if (basket.length > 0) {
+    if (basket) {
       basket.forEach((x) => {
         newPrice += x.amount * x.product.price;
       });
