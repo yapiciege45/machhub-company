@@ -58,7 +58,7 @@ export const RestaurantMenuRightComponent = ({
         <div className="w-full flex justify-center items-center h-6 border-b">
           <p className="text-xs font-bold text-black">Din kurv</p>
         </div>
-        {!basket || basket.length == 0 ? (
+        {!basket ? (
           <div className={`h-24 flex flex-col items-center justify-center`}>
             <IconShoppingBagX size={36} color="gray" />
             <p className="text-xs font-light mt-3">
@@ -101,7 +101,7 @@ export const RestaurantMenuRightComponent = ({
           </div>
         </div>
       </div>
-      {basket && basket.length > 0 && (
+      {basket && (
         <div className="w-full rounded-lg p-3 mt-5 flex justify-center items-center bg-[#4c653f] cursor-pointer">
           <p className="text-sm text-white font-bold">Gå til betaling</p>
         </div>
