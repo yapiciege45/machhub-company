@@ -1,0 +1,466 @@
+{
+  "id": 1,
+  "name": "Example Company",
+  "chain_name": "Example Chain Name",
+  "notes": "Example Note",
+  "address": "Kopenhag",
+  "contact": {
+    "name": "Ege Yapıcı",
+    "phone": "05511494774",
+    "email": "yapiciege45@gmail.com"
+  },
+  "domain": "localhost",
+  "is_active": 1,
+  "social": {
+    "facebook": "examplefacebook",
+    "instagram": "exampleinstagram",
+    "x": "examplex"
+  },
+  "restaurants": [
+    {
+      "id": 1,
+      "is_active": 0,
+      "lat": "55.6712398",
+      "long": "12.5114243",
+      "address": "Kopenhag Example Address 1111",
+      "logo": "https://i.pinimg.com/736x/ab/3d/e2/ab3de2f5cc08f507f728f39c66e596b8.jpg",
+      "menu_id": 1,
+      "hours": {
+        "restaurant": [
+          {
+            "id": 1,
+            "name": "Monday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 2,
+            "name": "Tuesday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 3,
+            "name": "Wednesday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 4,
+            "name": "Thursday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 5,
+            "name": "Friday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 6,
+            "name": "Saturday",
+            "hours": "08:00-12:10"
+          },
+          {
+            "id": 7,
+            "name": "Sunday",
+            "hours": "08:00-12:10"
+          }
+        ]
+      },
+      "menu": {
+        "id": 1,
+        "categories": [
+          {
+            "id": 1,
+            "name": "Pizza",
+            "description": "A description about pizza category",
+            "discount": 0,
+            "slug": "pizza",
+            "sort": 1,
+            "menu_id": 1,
+            "is_active": 1,
+            "products": [
+              {
+                "id": 1,
+                "name": "Hamburger",
+                "img": "https://www.shutterstock.com/image-photo/mini-hamburger-withbeef-tomato-cheese-260nw-1889885812.jpg",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "keywords": "hamburger",
+                "category_id": 1,
+                "allergen": ["A1", "A2"],
+                "discount": {
+                  "type": 2,
+                  "percent": 10
+                },
+                "slug": "hamburger",
+                "price": 90,
+                "menu_id": 1,
+                "variants": [
+                  {
+                    "id": 1,
+                    "name": "Renk",
+                    "options": [
+                      {
+                        "id": 1,
+                        "name": "Mavi",
+                        "price": 30,
+                        "extraGroups": []
+                      },
+                      {
+                        "id": 2,
+                        "name": "Kırmızı",
+                        "price": "45",
+                        "extraGroups": [
+                          {
+                            "id": 1,
+                            "name": "İçecekler",
+                            "display_name": "İçecekler",
+                            "is_active": 1,
+                            "menu_id": 1,
+                            "limit": 10,
+                            "sort": 1,
+                            "extras": [
+                              {
+                                "id": 1,
+                                "name": "Kola",
+                                "price": 50,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              },
+                              {
+                                "id": 2,
+                                "name": "Sprite",
+                                "price": 40,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "without_discount_price": 100
+              },
+              {
+                "id": 2,
+                "name": "Pizza",
+                "img": "https://www.shutterstock.com/image-photo/mini-hamburger-withbeef-tomato-cheese-260nw-1889885812.jpg",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "keywords": "hamburger",
+                "category_id": 1,
+                "allergen": ["A1", "A2"],
+                "discount": {
+                  "type": 2,
+                  "percent": 10
+                },
+                "slug": "hamburger",
+                "price": 90,
+                "menu_id": 1,
+                "variants": [
+                  {
+                    "id": 1,
+                    "name": "Renk",
+                    "options": [
+                      {
+                        "id": 1,
+                        "name": "Mavi",
+                        "price": 30,
+                        "extraGroups": []
+                      },
+                      {
+                        "id": 2,
+                        "name": "Kırmızı",
+                        "price": "45",
+                        "extraGroups": [
+                          {
+                            "id": 1,
+                            "name": "İçecekler",
+                            "display_name": "İçecekler",
+                            "is_active": 1,
+                            "menu_id": 1,
+                            "limit": 10,
+                            "sort": 1,
+                            "extras": [
+                              {
+                                "id": 1,
+                                "name": "Kola",
+                                "price": 50,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              },
+                              {
+                                "id": 2,
+                                "name": "Sprite",
+                                "price": 40,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "without_discount_price": 100
+              },
+              {
+                "id": 1,
+                "name": "Hamburger",
+                "img": "https://www.shutterstock.com/image-photo/mini-hamburger-withbeef-tomato-cheese-260nw-1889885812.jpg",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "keywords": "hamburger",
+                "category_id": 1,
+                "allergen": ["A1", "A2"],
+                "discount": {
+                  "type": 2,
+                  "percent": 10
+                },
+                "slug": "hamburger",
+                "price": 90,
+                "menu_id": 1,
+                "variants": [
+                  {
+                    "id": 1,
+                    "name": "Renk",
+                    "options": [
+                      {
+                        "id": 1,
+                        "name": "Mavi",
+                        "price": 30,
+                        "extraGroups": []
+                      },
+                      {
+                        "id": 2,
+                        "name": "Kırmızı",
+                        "price": "45",
+                        "extraGroups": [
+                          {
+                            "id": 1,
+                            "name": "İçecekler",
+                            "display_name": "İçecekler",
+                            "is_active": 1,
+                            "menu_id": 1,
+                            "limit": 10,
+                            "sort": 1,
+                            "extras": [
+                              {
+                                "id": 1,
+                                "name": "Kola",
+                                "price": 50,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              },
+                              {
+                                "id": 2,
+                                "name": "Sprite",
+                                "price": 40,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "without_discount_price": 100
+              },
+              {
+                "id": 1,
+                "name": "Hamburger",
+                "img": "https://www.shutterstock.com/image-photo/mini-hamburger-withbeef-tomato-cheese-260nw-1889885812.jpg",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "keywords": "hamburger",
+                "category_id": 1,
+                "allergen": ["A1", "A2"],
+                "discount": {
+                  "type": 2,
+                  "percent": 10
+                },
+                "slug": "hamburger",
+                "price": 90,
+                "menu_id": 1,
+                "variants": [
+                  {
+                    "id": 1,
+                    "name": "Renk",
+                    "options": [
+                      {
+                        "id": 1,
+                        "name": "Mavi",
+                        "price": 30,
+                        "extraGroups": []
+                      },
+                      {
+                        "id": 2,
+                        "name": "Kırmızı",
+                        "price": "45",
+                        "extraGroups": [
+                          {
+                            "id": 1,
+                            "name": "İçecekler",
+                            "display_name": "İçecekler",
+                            "is_active": 1,
+                            "menu_id": 1,
+                            "limit": 10,
+                            "sort": 1,
+                            "extras": [
+                              {
+                                "id": 1,
+                                "name": "Kola",
+                                "price": 50,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              },
+                              {
+                                "id": 2,
+                                "name": "Sprite",
+                                "price": 40,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "without_discount_price": 100
+              },
+              {
+                "id": 5,
+                "name": "Hamburger",
+                "img": "https://www.shutterstock.com/image-photo/mini-hamburger-withbeef-tomato-cheese-260nw-1889885812.jpg",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "keywords": "hamburger",
+                "category_id": 1,
+                "allergen": ["A1", "A2"],
+                "discount": {
+                  "type": 2,
+                  "percent": 10
+                },
+                "slug": "hamburger",
+                "price": 90,
+                "menu_id": 1,
+                "variants": [
+                  {
+                    "id": 1,
+                    "name": "Renk",
+                    "options": [
+                      {
+                        "id": 1,
+                        "name": "Mavi",
+                        "price": 30,
+                        "extraGroups": []
+                      },
+                      {
+                        "id": 2,
+                        "name": "Kırmızı",
+                        "price": "45",
+                        "extraGroups": [
+                          {
+                            "id": 1,
+                            "name": "İçecekler",
+                            "display_name": "İçecekler",
+                            "is_active": 1,
+                            "menu_id": 1,
+                            "limit": 10,
+                            "sort": 1,
+                            "extras": [
+                              {
+                                "id": 1,
+                                "name": "Kola",
+                                "price": 50,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              },
+                              {
+                                "id": 2,
+                                "name": "Sprite",
+                                "price": 40,
+                                "is_default": 0,
+                                "is_disabled": 0,
+                                "sort": 1,
+                                "group_id": 1,
+                                "limit": 0
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "without_discount_price": 100
+              }
+            ],
+            "created_at": "20.10.2023 11:04",
+            "updated_at": "12.11.2023 22:45"
+          }
+        ],
+        "created_at": "20.10.2023 11:04",
+        "updated_at": "12.11.2023 22:45"
+      },
+      "name": "Test Restaurant",
+      "slug": "test-restaurant",
+      "phone": "05511494774",
+      "place_id": "example_place_id",
+      "platform_is_active": 1,
+      "web_is_active": 1,
+      "company": {
+        "id": 1,
+        "name": "Example Company",
+        "chain_name": "Example Chain Name",
+        "notes": "Example Note",
+        "address": "Kopenhag",
+        "contact": {
+          "name": "Ege Yapıcı",
+          "phone": "05511494774",
+          "email": "yapiciege45@gmail.com"
+        },
+        "domain": "localhost",
+        "is_active": 1,
+        "social": {
+          "facebook": "examplefacebook",
+          "instagram": "exampleinstagram",
+          "x": "examplex"
+        },
+        "created_at": "20.10.2023 11:04",
+        "updated_at": "12.11.2023 22:45"
+      },
+      "created_at": "20.10.2023 11:25",
+      "updated_at": "20.10.2023 11:25"
+    }
+  ],
+  "created_at": "20.10.2023 11:04",
+  "updated_at": "12.11.2023 22:45"
+}

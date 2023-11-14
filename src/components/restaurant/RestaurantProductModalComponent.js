@@ -58,18 +58,19 @@ export const RestaurantProductModalComponent = ({
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
     refreshBasket();
+    setModalIsOpen(false);
   }, [basket]);
 
   return (
     <div
       onClick={() => setModalIsOpen(false)}
-      className={`w-full h-screen bg-black/50 fixed top-0 left-0 flex justify-center items-center ${
+      className={`w-full h-screen bg-black/50 z-50 fixed top-0 left-0 flex justify-center items-center ${
         !modalIsOpen && "hidden"
       }`}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="flex flex-col relative w-11/12 md:w-1/3 lg:w-1/4 bg-white rounded-xl max-h-[90vh] overflow-y-auto"
+        className="flex flex-col relative w-11/12 md:w-2/3 lg:w-1/3 xl:w-1/4 bg-white rounded-xl max-h-[90vh] overflow-y-auto"
       >
         <IconCircleXFilled
           size={36}

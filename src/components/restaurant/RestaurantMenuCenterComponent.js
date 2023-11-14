@@ -11,8 +11,10 @@ export const RestaurantMenuCenterComponent = ({
   setScrollingCategory,
 }) => {
   return (
-    <div className={`p-5 flex flex-col w-full lg:w-1/2 items-start relative`}>
-      <div className={`sticky p-3 top-0 left-0 bg-[#F5F3ED] w-full`}>
+    <div className={`md:p-5 flex flex-col w-full items-start relative`}>
+      <div
+        className={`sticky py-3 md:p-3 top-0 lg:top-20 left-0 bg-[#F5F3ED] w-full`}
+      >
         <div
           className={`w-full py-3 overflow-x-scroll flex lg:hidden items-center gap-8`}
         >

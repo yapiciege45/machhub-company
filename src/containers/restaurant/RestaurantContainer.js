@@ -8,24 +8,34 @@ import { useContext, useState } from "react";
 import { InfoModal } from "../shared/InfoModal";
 import { RestaurantMenuLeftComponent } from "@/components/restaurant/RestaurantMenuLeftComponent";
 import { RestaurantMenuCenterComponent } from "@/components/restaurant/RestaurantMenuCenterComponent";
-import { RestaurantMenuRightComponent } from "@/components/restaurant/RestaurantMenuRightComponent";
 import { RestaurantCategoryComponent } from "@/components/restaurant/RestaurantCategoryComponent";
 import { RestaurantProductComponent } from "@/components/restaurant/RestaurantProductComponent";
 import { searchProduct } from "@/hooks/product/searchProduct";
+import { RestaurantBasketModalComponent } from "@/components/restaurant/RestaurantBasketModalComponent";
+import { RestaurantFixedNavbarComponent } from "@/components/restaurant/RestaurantFixedNavbarComponent";
 
 export const RestaurantContainer = ({ slug }) => {
-  const { deliveryType, setDeliveryType, infoModal, setInfoModal } =
-    useContext(MyContext);
+  const {
+    deliveryType,
+    setDeliveryType,
+    infoModal,
+    setInfoModal,
+    basket,
+    setBasket,
+    refreshBasket,
+    saveBasket,
+    totalPrice,
+    setTotalPrice,
+  } = useContext(MyContext);
 
   const [firstRestaurant, setFirstRestaurant] = useState({});
 
   const [search, setSearch] = useState("");
-  const [restaurant, setRestaurant] = useState();
+  const [restaurant, setRestaurant] = useState(null);
   const [category, setCategory] = useState(null);
   const [scrollingCategory, setScrollingCategory] = useState(null);
 
-  const [basket, setBasket] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [basketModalIsOpen, setBasketModalIsOpen] = useState(false);
 
   const topRef = useRef(null);
 
@@ -34,19 +44,25 @@ export const RestaurantContainer = ({ slug }) => {
   const day = new Date().getDay() == 0 ? 6 : new Date().getDay() - 1;
 
   useEffect(() => {
-    getRestaurant(slug).then((x) => {
+    const domain = window.location.hostname;
+    getRestaurant(slug, domain).then((x) => {
       setFirstRestaurant(x);
       setRestaurant(x);
     });
   }, []);
 
   useEffect(() => {
-    if (firstRestaurant.categories) {
-      searchProduct(firstRestaurant.categories, search).then((x) => {
+    if (firstRestaurant.menu) {
+      searchProduct(firstRestaurant.menu.categories, search).then((x) => {
         setRestaurant(() => {
+          const menu = {
+            ...firstRestaurant.menu,
+            categories: x,
+          };
+
           const newRestaurant = {
             ...firstRestaurant,
-            categories: x,
+            ...menu,
           };
 
           return newRestaurant;
@@ -93,12 +109,12 @@ export const RestaurantContainer = ({ slug }) => {
     };
   }, []);
 
-  function refreshBasket() {
-    setBasket(JSON.parse(localStorage.getItem("basket")));
-  }
-
   useEffect(() => {
-    setBasket(JSON.parse(localStorage.getItem("basket")));
+    const gettedBasket = localStorage.getItem("basket");
+
+    if (gettedBasket) {
+      setBasket(JSON.parse(gettedBasket));
+    }
   }, []);
 
   useEffect(() => {
@@ -120,12 +136,26 @@ export const RestaurantContainer = ({ slug }) => {
           restaurant={restaurant}
           setInfoModal={setInfoModal}
         />
+        <RestaurantFixedNavbarComponent
+          deliveryType={deliveryType}
+          setDeliveryType={setDeliveryType}
+          restaurant={restaurant}
+          setInfoModal={setInfoModal}
+          day={day}
+          setBasketModalIsOpen={setBasketModalIsOpen}
+        />
+        <RestaurantBasketModalComponent
+          basketModalIsOpen={basketModalIsOpen}
+          setBasketModalIsOpen={setBasketModalIsOpen}
+          restaurant={restaurant}
+        />
         <RestaurantTopComponent
           deliveryType={deliveryType}
           setDeliveryType={setDeliveryType}
           restaurant={restaurant}
           day={day}
           ref={topRef}
+          setBasketModalIsOpen={setBasketModalIsOpen}
         />
         <InfoModal
           deliveryType={deliveryType}
@@ -140,7 +170,7 @@ export const RestaurantContainer = ({ slug }) => {
           ref={categoryListRef}
         >
           <RestaurantMenuLeftComponent
-            categories={restaurant.categories}
+            categories={restaurant.menu.categories}
             category={category}
             setCategory={setCategory}
             setScrollingCategory={setScrollingCategory}
@@ -149,11 +179,11 @@ export const RestaurantContainer = ({ slug }) => {
             search={search}
             setSearch={setSearch}
             setScrollingCategory={setScrollingCategory}
-            categories={restaurant.categories}
+            categories={restaurant.menu.categories}
             category={category}
             setCategory={setCategory}
           >
-            {restaurant.categories.map((category, index) => (
+            {restaurant.menu.categories.map((category, index) => (
               <RestaurantCategoryComponent
                 key={index}
                 id={`category-${category.id}`}
@@ -170,12 +200,6 @@ export const RestaurantContainer = ({ slug }) => {
               </RestaurantCategoryComponent>
             ))}
           </RestaurantMenuCenterComponent>
-          <RestaurantMenuRightComponent
-            deliveryType={deliveryType}
-            setDeliveryType={setDeliveryType}
-            basket={basket}
-            totalPrice={totalPrice}
-          />
         </div>
       </div>
     );
