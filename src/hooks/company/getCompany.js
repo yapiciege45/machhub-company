@@ -1,7 +1,7 @@
 import Company from "@/mocks/Company.json";
 
 export const getCompany = async (domain) => {
-  const res = await fetch(`${process.env.API_URL}/api/front/company/find`, {
+  const res = await fetch(`https://nadmin.machhub.dk/api/front/company/find`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
