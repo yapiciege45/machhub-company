@@ -2,6 +2,8 @@
 import { IconCircleXFilled } from "@tabler/icons-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { RestaurantProductModalVariantComponent } from "./RestaurantProductModalVariantComponent";
+import { RestaurantProductModalExtraGroupComponent } from "./RestaurantProductModalExtraGroupComponent";
 
 export const RestaurantProductModalComponent = ({
   product,
@@ -13,20 +15,25 @@ export const RestaurantProductModalComponent = ({
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState("");
 
+  const [extraGroups, setExtraGroups] = useState([]);
+  const [variant, setVariant] = useState(null);
+
+  console.log(product);
+
   const [basket, setBasket] = useState(
     JSON.parse(localStorage.getItem("basket")),
   );
 
   function decreaseAmount() {
     if (amount > 1) {
+      setPrice((prevState) => prevState - prevState / amount);
       setAmount((prevState) => prevState - 1);
-      setPrice((prevState) => price - product.price);
     }
   }
 
   function increaseAmount() {
+    setPrice((prevState) => (amount + 1) * (prevState / amount));
     setAmount((prevState) => prevState + 1);
-    setPrice((prevState) => price + product.price);
   }
 
   function addToBasket() {
@@ -79,7 +86,7 @@ export const RestaurantProductModalComponent = ({
         />
         <div className="h-auto w-full relative">
           <Image
-            src={product.img}
+            src={`${process.env.API_URL}/${product.image}`}
             width={0}
             height={0}
             sizes="100vw"
@@ -90,11 +97,27 @@ export const RestaurantProductModalComponent = ({
           <h2 className="text-xl font-bold">{product.name}</h2>
           <p className="text-sm">{product.description}</p>
         </div>
-        <div className="p-5">
+        <div className="px-5 flex flex-col">
+          {product.variants.map((x) => (
+            <RestaurantProductModalVariantComponent
+              variant={x}
+              setExtraGroups={setExtraGroups}
+              amount={amount}
+              setPrice={setPrice}
+              setVariant={setVariant}
+            />
+          ))}
+          {extraGroups.map((x) => (
+            <RestaurantProductModalExtraGroupComponent
+              extraGroup={x}
+              amount={amount}
+              setPrice={setPrice}
+            />
+          ))}
           <textarea
             cols={1}
             rows={1}
-            className="w-full border p-3"
+            className="w-full border p-3 mt-5"
             placeholder="Note"
             onChange={(e) => setNote(e.target.value)}
           >

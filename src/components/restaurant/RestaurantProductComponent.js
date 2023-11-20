@@ -6,6 +6,8 @@ import { RestaurantProductModalComponent } from "./RestaurantProductModalCompone
 export const RestaurantProductComponent = ({ product, refreshBasket }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  console.log(product);
+
   return (
     <>
       <RestaurantProductModalComponent
@@ -30,7 +32,7 @@ export const RestaurantProductComponent = ({ product, refreshBasket }) => {
         </div>
         <div className="w-1/3 flex justify-end">
           <Image
-            src={product.img}
+            src={`${process.env.API_URL}/${product.image}`}
             quality={100}
             className="w-28 h-28 rounded-xl"
             width={100}

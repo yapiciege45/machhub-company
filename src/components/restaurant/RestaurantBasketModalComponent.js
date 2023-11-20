@@ -41,8 +41,13 @@ export const RestaurantBasketModalComponent = ({
         {basket != "null" && basket && basket.length != 0 && (
           <div className="flex flex-col mt-3 w-full">
             {basket.map((x, index) => (
-              <div key={index} className="flex justify-between w-full">
-                <Image src={x.product.img} width={100} height={100} />
+              <div key={index} className="flex justify-between w-full mt-3">
+                <Image
+                  src={`${process.env.API_URL}/${x.product.image}`}
+                  width={100}
+                  height={100}
+                  className="rounded-xl"
+                />
                 <div className="flex justify-between w-full ml-3">
                   <div className="flex flex-col">
                     <p className="text-md font-bold">{x.product.name}</p>

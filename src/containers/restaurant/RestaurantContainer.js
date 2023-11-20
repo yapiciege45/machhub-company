@@ -37,6 +37,9 @@ export const RestaurantContainer = ({ slug }) => {
 
   const [basketModalIsOpen, setBasketModalIsOpen] = useState(false);
 
+  const [token, setToken] = useState(null);
+  const [user, setUser] = useState(null);
+
   const topRef = useRef(null);
 
   const categoryListRef = useRef(null);
@@ -49,7 +52,24 @@ export const RestaurantContainer = ({ slug }) => {
       setFirstRestaurant(x);
       setRestaurant(x);
     });
+
+    setToken(localStorage.getItem("token"));
   }, []);
+
+  useEffect(() => {
+    fetch(`${process.env.API_URL}/api/customer`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }, [token]);
 
   useEffect(() => {
     if (firstRestaurant.menu) {
