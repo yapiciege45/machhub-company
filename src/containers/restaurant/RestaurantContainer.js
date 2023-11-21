@@ -37,7 +37,6 @@ export const RestaurantContainer = ({ slug }) => {
 
   const [basketModalIsOpen, setBasketModalIsOpen] = useState(false);
 
-  const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);
 
   const topRef = useRef(null);
@@ -52,24 +51,27 @@ export const RestaurantContainer = ({ slug }) => {
       setFirstRestaurant(x);
       setRestaurant(x);
     });
-
-    setToken(localStorage.getItem("token"));
   }, []);
 
   useEffect(() => {
-    fetch(`${process.env.API_URL}/api/customer`, {
+    fetch(`${process.env.API_URL}/api/user`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.status == "success") {
+          setUser(data.data);
+          console.log(data.data);
+        } else {
+          setUser(null);
+        }
       });
-  }, [token]);
+  }, []);
 
   useEffect(() => {
     if (firstRestaurant.menu) {
@@ -145,9 +147,6 @@ export const RestaurantContainer = ({ slug }) => {
   }, [scrollingCategory]);
 
   if (restaurant) {
-    {
-      console.log(restaurant);
-    }
     return (
       <div className="flex flex-col items-center">
         <RestaurantNavbarComponent
@@ -155,6 +154,7 @@ export const RestaurantContainer = ({ slug }) => {
           setDeliveryType={setDeliveryType}
           restaurant={restaurant}
           setInfoModal={setInfoModal}
+          user={user}
         />
         <RestaurantFixedNavbarComponent
           deliveryType={deliveryType}
